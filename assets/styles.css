@@ -1,4 +1,35 @@
 @charset "UTF-8";
+/* source-sans-pro-regular - latin-ext_latin */
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Source Sans Pro Regular"), local("SourceSansPro-Regular"), url("assets/fonts/source-sans-pro-v14-latin-ext_latin-regular.woff2") format("woff2"), url("assets/fonts/source-sans-pro-v14-latin-ext_latin-regular.ttf") format("truetype");
+}
+/* source-sans-pro-700 - latin-ext_latin */
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Source Sans Pro Bold"), local("SourceSansPro-Bold"), url("assets/fonts/source-sans-pro-v14-latin-ext_latin-700.woff2") format("woff2"), url("assets/fonts/source-sans-pro-v14-latin-ext_latin-700.ttf") format("truetype");
+}
+/* neuton italic - latin */
+@font-face {
+  font-family: "Neuton";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Neuton Italic"), local("Neuton-Italic"), url("assets/fonts/neuton-v13-latin-italic.woff2") format("woff2"), url("assets/fonts/neuton-v13-latin-italic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets/fonts/MaterialIcons-Regular.ttf) format("truetype");
+}
 /* Workaround for 'break-before:avoid' */
 * {
   margin: 0;
@@ -12,7 +43,7 @@ ul, li {
   padding: 0;
 }
 
-span, q {
+q {
   display: block;
 }
 
@@ -55,7 +86,7 @@ li:first-child {
   height: auto;
   padding: 0 50px;
   margin: 0 auto;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   color: #222222;
 }
 
@@ -255,8 +286,18 @@ li:first-child {
   white-space: nowrap;
 }
 
+.sidebar {
+  background-color: #e0f2f1;
+  padding: 1em;
+}
+
+.basics .heading {
+  background-color: #009688;
+  color: white;
+}
 .basics .main {
   vertical-align: middle;
+  padding: 1em;
 }
 .basics .main .name {
   font-size: 80px;
@@ -274,15 +315,20 @@ li:first-child {
 }
 .basics .side {
   vertical-align: middle;
-  padding-left: 0;
-  padding-top: 15px;
+  padding: 1em;
 }
-.basics .side .contact {
-  list-style-type: none;
+.basics .side .contact span {
+  display: inline-block;
 }
-.basics .side .contact li {
-  font-size: 18px;
-  line-height: 1.6em;
+.basics .side .contact .url,
+.basics .side .contact .email,
+.basics .side .contact .phone,
+.basics .side .contact .address {
+  margin-top: 10px;
+}
+.basics .summary {
+  background-color: #e0f2f1;
+  padding: 1em;
 }
 
 .links ul {

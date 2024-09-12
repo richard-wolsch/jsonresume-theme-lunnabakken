@@ -4,17 +4,17 @@ html(lang="en")
     meta(charset="utf-8")
     style
       include styles.css
-    title=`Resume ${resume.basics.name} – ${resume.basics.label}`
+    title=`${resume.trans.title ? resume.trans.title : 'Resume'} ${resume.basics.name} – ${resume.basics.label}`
   body
     div(class='content')
       include pug/basics
-      div(class='table padding-top-container-2')
+      div(class='table')
         div(class='main')
           include pug/work
           include pug/projects
           include pug/publications
           include pug/volunteer
-        div(class='side')
+        div(class='side sidebar')
           include pug/skills
           include pug/education
           include pug/certificates

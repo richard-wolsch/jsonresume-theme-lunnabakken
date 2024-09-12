@@ -1,7 +1,13 @@
 .basics {
 
+  .heading {
+    background-color: $primary-color;
+    color: $text-color-inverse;
+  }
+
   .main {
     vertical-align: middle;
+    padding: 1em;
 
     .name {
       font-size: $header-name-font-size;
@@ -22,16 +28,25 @@
 
   .side {
     vertical-align: middle;
-    padding-left: 0;
-    padding-top: 15px;
+    padding: 1em;
 
     .contact {
-      list-style-type: none;
+      span {
+        display: inline-block;
+      }
 
-      li {
-        font-size: $font-size-large;
-        line-height: $line-height-3;
+      .url,
+      .email,
+      .phone,
+      .address
+      {
+         margin-top: $space-1;
       }
     }
+  }
+
+  .summary {
+    background-color: $primary-color-light;
+    padding: 1em;
   }
 }

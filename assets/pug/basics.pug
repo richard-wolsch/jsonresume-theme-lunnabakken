@@ -1,12 +1,21 @@
 div(class='basics')
-  div(class='table padding-bottom-container-2')
+  div(class='heading table padding-bottom-container-2')
     div(class='main')
       span(class='name')=resume.basics.name
       span(class='label')=resume.basics.label
     div(class='side')
-      ul(class='contact')
-        li=resume.basics.phone
-        li=resume.basics.email
-        li(class='margin-text-5')=helper.calcLocation(resume.basics.location)
+      div(class='contact')
+        span(class='url')=resume.basics.url
+        br
+        span(class='email')=resume.basics.email
+        br
+        span(class='phone')=resume.basics.phone
+        br
+        span(class='address')=resume.basics.location.address
+          if resume.basics.location.address2
+            br
+            span(class='address2')=resume.basics.location.address2
+          br
+          span(class='city')=`${resume.basics.location.postalCode} ${resume.basics.location.city}`
   if resume.basics.summary
     div(class='summary markdown padding-container-2')!=helper.mdToHtml(resume.basics.summary)

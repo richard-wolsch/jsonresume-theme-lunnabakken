@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-
+@import "scss/common/fonts";
 @import 'scss/common/variables';
 @import 'scss/common/mixins';
 @import 'scss/common/reset';
@@ -11,6 +11,7 @@
 @import 'scss/common/markdown';
 
 @import 'scss/main';
+@import 'scss/sidebar';
 
 @import 'scss/basics';
 @import 'scss/links';
