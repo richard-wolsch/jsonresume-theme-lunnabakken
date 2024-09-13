@@ -3,11 +3,25 @@
 .education {
 
   .title {
-    font-size: $font-size-small;
+    font-size: $font-size-large;
+    font-weight: lighter;
   }
 
   .institution {
     font-size: $font-size-small;
     font-weight: lighter;
+
+    ul {
+      list-style: none;
+
+      .course {
+        &:before {
+          @extend .material-icons;
+          padding-right: 5px;
+          content: 'east';
+          font-size: 80%;
+        }
+      }
+    }
   }
 }

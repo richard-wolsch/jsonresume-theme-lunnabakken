@@ -1,21 +1,18 @@
 # Actual theme for JSON Resume
 
 Minimalist and modern theme for [JSON Resume](https://jsonresume.org/) standard, designed for
-the [v1.0.0 version](https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json).
+the [v1.0.0 version](https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json) with some color added.
+This is based on [davcd/jsonresume-theme-actual](https://github.com/davcd/jsonresume-theme-actual).
 
 - Only meaningful information
-- Single color
+- Primary color and text color
 - Single font-family
-- Single page? Up to you!
+- Some Material Icons
+- Optional translated headlines
 
-### Export examples
+![Example First Page](docs/example-resume.png)
 
-- [Extended version](docs/resume_extended.pdf)
-- [Simple version](docs/resume_simple.pdf)
-
-Maybe you would like to take a look at
-[jsonresume-theme-actual-letter](https://github.com/davcd/jsonresume-theme-actual-letter)
-to create your letter.
+For a full example see [docs/example-resume.pdf](docs/example-resume.pdf).
 
 ## Table of contents
 
@@ -51,8 +48,8 @@ resume export resume.html --format html --theme actual
 ## Contribute
 
 ```bash
-git clone git@github.com:davcd/jsonresume-theme-actual.git
-cd jsonresume-theme-actual
+git clone git@github.com:richard-wolsch/jsonresume-theme-lunnabakken.git
+cd jsonresume-theme-lunnabakken
 
 npm install
 
@@ -284,3 +281,21 @@ This theme supports the following JSON paths
 ```
 
 - `resume.projects.description` supports markdown
+
+### Translation
+
+Headlines may be optionally translated. Be aware that this is not part of the JSON schema!
+
+```json
+{
+  "trans": {
+    "title": "Profil",
+    "skills": "Kenntnisse",
+    "education": "Ausbildung",
+    "score": "Note",
+    "references": "Referenzen",
+    "languages": "Sprachen",
+    "work": "Erfahrung"
+  }
+}
+```

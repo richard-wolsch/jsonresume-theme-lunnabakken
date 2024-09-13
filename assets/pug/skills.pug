@@ -1,6 +1,6 @@
 if helper.validArray(resume.skills)
-  div(class='skills margin-container-4')
-    p(class='section-title no-alone-1') Skills
+  div(class='skills margin-container-4 no-break')
+    p(class='section-title no-alone-1')=`${(resume.trans && resume.trans.skills) ? resume.trans.skills : 'Skills'}`
     div(class='container')
       each skill in resume.skills
         div(class='article no-break')

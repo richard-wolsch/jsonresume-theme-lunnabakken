@@ -5,14 +5,15 @@ $content-main-percentage: 70%;
 $content-side-percentage: 100% - $content-main-percentage;
 
 $space-1: 10px;
-$space-2: 20px;
-$space-3: 30px;
-$space-4: 50px;
+$space-2: 15px;
+$space-3: 20px;
+$space-4: 25px;
 
 $line-height-1: 1.25em;
 $line-height-2: 1.35em;
 $line-height-3: 1.6em;
 
+// set basic colors here
 $text-color: #222222;
 $text-color-inverse: #ffffff;
 $primary-color: #009688;
@@ -26,3 +27,6 @@ $font-size-xsmall: 14px;
 
 $header-name-font-size: 80px;
 $header-line-font-size: 40px;
+
+// 1 for one column in the sidebar, 2 for two columns in the sidebar
+$skill-columns: 1;

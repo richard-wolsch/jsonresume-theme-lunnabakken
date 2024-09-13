@@ -4,7 +4,7 @@ html(lang="en")
     meta(charset="utf-8")
     style
       include styles.css
-    title=`${resume.trans.title ? resume.trans.title : 'Resume'} ${resume.basics.name} – ${resume.basics.label}`
+    title=`${(resume.trans && resume.trans.title) ? resume.trans.title : 'Resume'} ${resume.basics.name} – ${resume.basics.label}`
   body
     div(class='content')
       include pug/basics
@@ -15,11 +15,11 @@ html(lang="en")
           include pug/publications
           include pug/volunteer
         div(class='side sidebar')
-          include pug/skills
           include pug/education
+          include pug/skills
           include pug/certificates
           include pug/awards
-          include pug/references
           include pug/languages
+          include pug/references
           include pug/interests
           include pug/links

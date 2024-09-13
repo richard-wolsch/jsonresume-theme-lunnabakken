@@ -1,6 +1,6 @@
 if helper.validArray(resume.references)
-  div(class='references margin-container-4')
-    p(class='section-title no-alone-2') References
+  div(class='references margin-container-4 no-break')
+    p(class='section-title no-alone-2')=`${(resume.trans && resume.trans.references) ? resume.trans.references : 'References'}`
     div(class='container')
       each reference in resume.references
         div(class='article margin-container-2 no-break')

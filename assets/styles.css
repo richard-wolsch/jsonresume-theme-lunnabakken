@@ -1,11 +1,10 @@
-@charset "UTF-8";
 /* source-sans-pro-regular - latin-ext_latin */
 @font-face {
   font-family: "Source Sans Pro";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local("Source Sans Pro Regular"), local("SourceSansPro-Regular"), url("assets/fonts/source-sans-pro-v14-latin-ext_latin-regular.woff2") format("woff2"), url("assets/fonts/source-sans-pro-v14-latin-ext_latin-regular.ttf") format("truetype");
+  src: local("Source Sans Pro Regular"), local("SourceSansPro-Regular"), url(https://fonts.gstatic.com/s/sourcecodepro/v23/HI_diYsKILxRpg3hIP6sJ7fM7PqPMcMnZFqUwX28DMyQtMdrTEUc.woff2) format("woff2");
 }
 /* source-sans-pro-700 - latin-ext_latin */
 @font-face {
@@ -13,23 +12,35 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: local("Source Sans Pro Bold"), local("SourceSansPro-Bold"), url("assets/fonts/source-sans-pro-v14-latin-ext_latin-700.woff2") format("woff2"), url("assets/fonts/source-sans-pro-v14-latin-ext_latin-700.ttf") format("truetype");
-}
-/* neuton italic - latin */
-@font-face {
-  font-family: "Neuton";
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-  src: local("Neuton Italic"), local("Neuton-Italic"), url("assets/fonts/neuton-v13-latin-italic.woff2") format("woff2"), url("assets/fonts/neuton-v13-latin-italic.ttf") format("truetype");
+  src: local("Source Sans Pro Bold"), local("SourceSansPro-Bold"), url(https://fonts.gstatic.com/s/sourcecodepro/v23/HI_diYsKILxRpg3hIP6sJ7fM7PqPMcMnZFqUwX28DCuXtMdrTEUc.woff2) format("woff2");
 }
 @font-face {
   font-family: "Material Icons";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(assets/fonts/MaterialIcons-Regular.ttf) format("truetype");
+  src: url(https://fonts.gstatic.com/s/materialsymbolsoutlined/v207/kJF1BvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzByHX9rA6RzaxHMPdY43zj-jCxv3fzvRNU22ZXGJpEpjC_1v-p_4MrImHCIJIZrDCvHOej.woff2) format("woff2");
 }
+.material-icons, .education .institution ul .course:before, .basics .side .contact .url:before,
+.basics .side .contact .email:before,
+.basics .side .contact .phone:before,
+.basics .side .contact .address:before, .main .highlights li .highlight:before {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -moz-font-feature-settings: "liga";
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: middle;
+}
+
 /* Workaround for 'break-before:avoid' */
 * {
   margin: 0;
@@ -53,7 +64,7 @@ p {
 
 @media not print {
   body {
-    margin: 30px 0 50px 0;
+    margin: 20px 0 25px 0;
   }
 }
 @page {
@@ -97,12 +108,12 @@ li:first-child {
 .table .main {
   display: table-cell;
   width: 70%;
-  padding-right: 50px;
+  padding-right: 25px;
 }
 .table .side {
   display: table-cell;
   width: 30%;
-  padding-left: 50px;
+  padding-left: 25px;
   text-align: right;
 }
 
@@ -116,31 +127,35 @@ li:first-child {
 .section-title {
   font-size: 26px;
   font-weight: normal;
-  margin: 0 0 20px 0;
+  margin: 0 0 15px 0;
+}
+
+.date {
+  white-space: nowrap;
 }
 
 .margin-container-2:not(:first-child) {
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 .margin-container-3:not(:first-child) {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .margin-container-4:not(:first-child) {
-  margin-top: 50px;
+  margin-top: 25px;
 }
 
 .padding-container-2 {
-  padding: 20px 0;
+  padding: 15px 0;
 }
 
 .padding-top-container-2 {
-  padding-top: 20px;
+  padding-top: 15px;
 }
 
 .padding-bottom-container-2 {
-  padding-bottom: 20px;
+  padding-bottom: 15px;
 }
 
 .margin-text-1 {
@@ -227,17 +242,17 @@ li:first-child {
   font-weight: bold;
 }
 .markdown ul, .markdown ol {
-  margin-left: 20px;
+  margin-left: 15px;
 }
 .markdown img {
   display: block;
-  margin: 20px auto;
+  margin: 15px auto;
   max-width: 1000px;
   text-align: center;
 }
 .markdown blockquote {
-  margin: 20px 0;
-  padding: 15px 20px;
+  margin: 15px 0;
+  padding: 15px 15px;
 }
 .markdown blockquote p {
   display: inline;
@@ -252,16 +267,23 @@ li:first-child {
   padding: 0 10px;
   margin-bottom: 0;
   columns: 2;
-  column-width: 310px;
+  column-width: 322.5px;
   column-gap: 10px;
+  column-rule: 1px solid #222222;
 }
 .main .highlights li {
   font-size: 14px;
   list-style: none;
 }
-.main .highlights li:before {
-  content: "· ";
-  vertical-align: middle;
+.main .highlights li .highlight {
+  padding-left: 1.5em;
+  display: inline-block;
+}
+.main .highlights li .highlight:before {
+  padding-right: 5px;
+  content: "east";
+  font-size: 80%;
+  margin-left: -1.5em;
 }
 .main .left {
   display: table-cell;
@@ -283,7 +305,6 @@ li:first-child {
 .main .right .date {
   font-size: 15px;
   font-weight: lighter;
-  white-space: nowrap;
 }
 
 .sidebar {
@@ -293,10 +314,9 @@ li:first-child {
 
 .basics .heading {
   background-color: #009688;
-  color: white;
+  color: #ffffff;
 }
 .basics .main {
-  vertical-align: middle;
   padding: 1em;
 }
 .basics .main .name {
@@ -326,6 +346,24 @@ li:first-child {
 .basics .side .contact .address {
   margin-top: 10px;
 }
+.basics .side .contact .url:before,
+.basics .side .contact .email:before,
+.basics .side .contact .phone:before,
+.basics .side .contact .address:before {
+  padding-right: 5px;
+}
+.basics .side .contact .url:before {
+  content: "captive_portal";
+}
+.basics .side .contact .email:before {
+  content: "mail";
+}
+.basics .side .contact .phone:before {
+  content: "phone_iphone";
+}
+.basics .side .contact .address:before {
+  content: "home_pin";
+}
 .basics .summary {
   background-color: #e0f2f1;
   padding: 1em;
@@ -339,11 +377,20 @@ li:first-child {
 }
 
 .education .title {
-  font-size: 15px;
+  font-size: 18px;
+  font-weight: lighter;
 }
 .education .institution {
   font-size: 15px;
   font-weight: lighter;
+}
+.education .institution ul {
+  list-style: none;
+}
+.education .institution ul .course:before {
+  padding-right: 5px;
+  content: "east";
+  font-size: 80%;
 }
 
 .awards .header .title {
@@ -370,13 +417,13 @@ li:first-child {
 }
 .skills .container {
   display: block;
-  columns: 2;
+  columns: 1;
   column-gap: 10px;
 }
 .skills .container .article {
   break-inside: avoid-column;
-  min-width: 120px;
-  padding-top: 20px;
+  min-width: 132.5px;
+  padding-top: 15px;
 }
 .skills .container .article span {
   display: block;
@@ -409,4 +456,7 @@ li:first-child {
   font-size: 14.5px;
   font-weight: lighter;
   font-style: italic;
+}
+.references q:before, .references q:after {
+  content: "";
 }

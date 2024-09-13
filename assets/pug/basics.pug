@@ -11,11 +11,13 @@ div(class='basics')
         br
         span(class='phone')=resume.basics.phone
         br
-        span(class='address')=resume.basics.location.address
-          if resume.basics.location.address2
-            br
-            span(class='address2')=resume.basics.location.address2
+        span(class='address')=resume.basics.name
+        br
+        span(class='address2')=resume.basics.location.address
+        if resume.basics.location.address2
           br
-          span(class='city')=`${resume.basics.location.postalCode} ${resume.basics.location.city}`
+          span(class='address2')=resume.basics.location.address2
+        br
+        span(class='city')=`${resume.basics.location.postalCode} ${resume.basics.location.city}`
   if resume.basics.summary
     div(class='summary markdown padding-container-2')!=helper.mdToHtml(resume.basics.summary)
