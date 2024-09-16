@@ -3,6 +3,7 @@ div(class='basics')
     div(class='main')
       span(class='name')=resume.basics.name
       span(class='label')=resume.basics.label
+      span(class='last-updated')=`${(resume.trans && resume.trans.updated) ? resume.trans.updated : 'Updated'}: ${helper.beautifyFullDate(resume.meta.lastModified)}`
     div(class='side')
       div(class='contact')
         span(class='url')=resume.basics.url

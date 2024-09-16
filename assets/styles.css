@@ -318,6 +318,7 @@ li:first-child {
 }
 .basics .main {
   padding: 1em;
+  position: relative;
 }
 .basics .main .name {
   font-size: 80px;
@@ -332,6 +333,12 @@ li:first-child {
   font-weight: lighter;
   display: block;
   margin-left: -1.6px;
+}
+.basics .main .last-updated {
+  display: block;
+  position: absolute;
+  bottom: 1em;
+  height: 1em;
 }
 .basics .side {
   vertical-align: middle;

@@ -52,6 +52,8 @@ const calcDateRange = (start, end) => {
 
 const beautifyDate = (date) => moment(date, 'YYYY-MM-DD').format('YYYY')
 
+const beautifyFullDate = (date) => moment(date, 'YYYY-MM-DD').format('DD.MM.YYYY')
+
 const beautifyArray = (separator, array) => array.filter(x => x).join(separator)
 
 const arrayToPhrase = (array) => {
@@ -85,6 +87,7 @@ module.exports = {
   calcDate,
   calcDateRange,
   beautifyDate,
+  beautifyFullDate,
   beautifyArray,
   arrayToPhrase,
   beautifyLink,
