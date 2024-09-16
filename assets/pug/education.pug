@@ -20,7 +20,7 @@ if helper.validArray(resume.education)
             if edu.score
               | ,
               |
-              span=`${resume.trans.score ? resume.trans.score : 'Score'}: ${edu.score}`
+              span=`${(resume.trans && resume.trans.score) ? resume.trans.score : 'Score'}: ${edu.score}`
             if helper.validArray(edu.courses)
               ul
                 each course in edu.courses
